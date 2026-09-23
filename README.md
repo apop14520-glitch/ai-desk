@@ -21,10 +21,29 @@ only the Claude plan converts into programmatic use, via its Agent SDK credit.
 
 ## Setup
 
+Clone first, and run everything from inside the clone — `pip install -e .`
+reads `pyproject.toml` from the current directory.
+
+```bash
+git clone https://github.com/apop14520-glitch/ai-desk.git
+cd ai-desk
+```
+
+Linux / macOS:
+
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e .
 cp .env.example .env   # then fill it in
+```
+
+Windows (PowerShell):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1   # if blocked: Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+pip install -e .
+Copy-Item .env.example .env    # then fill it in
 ```
 
 For the Anthropic head on the plan credit, sign in with the Claude CLI once —
